@@ -1,0 +1,133 @@
+/* General styles for the container */
+.container {
+  background-image: url('./Assets/Background_image.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #121826;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Responsive text styles */
+.h31 {
+  color: #9DA3AE;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#heading {
+  color: #E5E7EB;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Flex container for the cards */
+.main {
+  display: flex;
+  flex-wrap: wrap; /* Wraps cards in rows on smaller screens */
+  justify-content: center;
+  gap: 20px; /* Adds spacing between cards */
+}
+
+/* Card styling */
+.card {
+  width: 320px;
+  border: 1px solid #212936;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #212936;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slightly lifts the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card content */
+.logo {
+  height: 60px;
+  width: 60px;
+  background-color: #FCEED8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 30px;
+  font-size: 200%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 20px;
+  color: #DEE9FC;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #DEE9FC;
+  text-align: left;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #9DA3AE;
+  text-align: left;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #heading {
+      font-size: 2rem;
+  }
+
+  .card {
+      width: 90%; /* Makes cards full width on smaller screens */
+      margin: 10px;
+  }
+
+  .h31 {
+      font-size: 1.2rem;
+  }
+}
+
+/* Additional styles for extra small screens */
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+  }
+
+  #heading {
+      font-size: 1.8rem;
+  }
+
+  .h31 {
+      font-size: 1rem;
+  }
+
+  .card {
+      width: 100%; /* Full width */
+  }
+}
+
+/* Styling for the card image */
+.card-image {
+  border-radius: 14px;
+  margin: 10px;
+  width: 100%;
+  height: auto; /* Makes sure the image scales with the card */
+}
